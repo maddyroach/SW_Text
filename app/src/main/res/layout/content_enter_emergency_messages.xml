@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".EnterEmergencyMessages"
+    tools:showIn="@layout/activity_enter_emergency_messages">
+
+    <EditText
+        android:id="@+id/messageMediumest"
+        android:layout_width="213dp"
+        android:layout_height="99dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Low Stress Message"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <EditText
+        android:id="@+id/messageHighest"
+        android:layout_width="211dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="High Stress Message"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageMediumest"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <Button
+        android:id="@+id/saveMessages"
+        android:layout_width="204dp"
+        android:layout_height="39dp"
+        android:text="Save Messages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageHighest"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <Button
+        android:id="@+id/sendMessageLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Message Low"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveMessages"
+        app:layout_constraintVertical_bias="0.358" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

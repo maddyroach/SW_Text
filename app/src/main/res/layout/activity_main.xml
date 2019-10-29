@@ -26,9 +26,61 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
+
+    <EditText
+        android:id="@+id/phoneNumberCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="96dp"
+        android:ems="10"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/addContactButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Contact"
+        app:layout_constraintBottom_toTopOf="@+id/ListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintVertical_bias="0.696" />
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="292dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <Button
+        android:id="@+id/moveToMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move to Message Page"
+        app:layout_constraintBottom_toTopOf="@+id/ListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addContactButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
